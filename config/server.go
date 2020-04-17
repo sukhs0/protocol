@@ -236,16 +236,14 @@ func DefaultNodeConfig() *NodeConfig {
 			RPCPrivateKey:    "",
 		},
 
-
 		ChainStateRotation: ChainStateRotationCfg{
-			Recent: 10,
-			Every: 100,
-			Cycles: 10,
+			Recent: 99,
+			Every:  100,
+			Cycles: 1000,
 		},
 
 		//"btc" service temporarily disabled
 		Services: []string{"broadcast", "node", "owner", "query", "tx", "eth"},
-
 	}
 }
 

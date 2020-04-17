@@ -1,14 +1,19 @@
 package fees
 
 import (
+	"errors"
 	"math/big"
 
 	"github.com/Oneledger/protocol/data/balance"
 )
 
 const (
-	POOL_KEY        = "00000000000000000000"
-	FEE_LOCK_BLOCKS = int64(3)
+	POOL_KEY        = "fee_pool_key"
+	FEE_LOCK_BLOCKS = int64(200000)
+)
+
+var (
+	errNotEnoughMaturedRewards = errors.New("not enough matured rewards")
 )
 
 type FeeOption struct {
